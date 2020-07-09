@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "marketapp-a38bc": {
+      "hosting": {
+        "app": [
+          "marketapp-a38bc"
+        ]
+      }
+    }
+  }
+}

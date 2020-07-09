@@ -1,0 +1,8 @@
+<ion-card class="ion-no-margin" (click)="viewDetail()">
+  <ion-img class="ion-margin-bottom" [src]="item.image"></ion-img>
+  <ion-label class="ion-margin">{{ item.title }}</ion-label>
+  <ion-row class="ion-margin ion-justify-content-between">
+    <ion-col size="6">${{ item.price }}</ion-col>
+    <ion-col size="6">{{ item.seller }}</ion-col>
+  </ion-row>
+</ion-card>
