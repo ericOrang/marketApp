@@ -7,28 +7,34 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-textarea
-    class="ion-margin"
-    rows="5"
-    placeholder="Brand, Usage, Source"
-  ></ion-textarea>
+  <form [formGroup]="newItem">
+    <ion-textarea
+      class="ion-margin"
+      rows="5"
+      placeholder="Brand, Usage, Source"
+    ></ion-textarea>
 
-  <ion-button color="light" class="upload_pic_btn ion-margin">
-    <ion-icon name="add-outline"></ion-icon>
-  </ion-button>
+    <ion-button color="light" class="upload_pic_btn ion-margin">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-button>
 
-  <ion-list>
-    <ion-item class="ion-no-padding ion-margin" detail>
-      <ion-icon name="cash-outline"></ion-icon>
-      <ion-label class="ion-margin-start">Price</ion-label>
-    </ion-item>
-    <ion-item class="ion-no-padding ion-margin" detail>
-      <ion-icon name="location-outline"></ion-icon>
-      <ion-label class="ion-margin-start">Location</ion-label>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+      <ion-item class="ion-no-padding ion-margin" detail>
+        <ion-icon name="duplicate-outline"></ion-icon>
+        <ion-label class="ion-margin-start">Category</ion-label>
+      </ion-item>
+      <ion-item class="ion-no-padding ion-margin" detail>
+        <ion-icon name="cash-outline"></ion-icon>
+        <ion-label class="ion-margin-start">Price</ion-label>
+      </ion-item>
+      <ion-item class="ion-no-padding ion-margin" detail>
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-label class="ion-margin-start">Location</ion-label>
+      </ion-item>
+    </ion-list>
 
-  <ion-button expand="block" class="ion-margin-horizontal">
-    <ion-label>Post</ion-label>
-  </ion-button>
+    <ion-button expand="block" class="ion-margin-horizontal">
+      <ion-label>Post</ion-label>
+    </ion-button>
+  </form>
 </ion-content>

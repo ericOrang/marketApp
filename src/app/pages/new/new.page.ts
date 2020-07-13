@@ -1,5 +1,6 @@
 import { ItemsService } from './../../services/items.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-new',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new.page.scss'],
 })
 export class NewPage implements OnInit {
-  constructor(private itemService: ItemsService) {}
+  newItem = this.fb.group({
+    title: [''],
+    images: [[]],
+    categories: [[]],
+    location: this.fb.group({
+      latitude: [''],
+      longitude: [''],
+    }),
+    price: [''],
+  });
+  constructor(private itemService: ItemsService, private fb: FormBuilder) {}
 
   ngOnInit() {}
 
